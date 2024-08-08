@@ -8,9 +8,12 @@ import './App.css'; // Import the CSS file
 const App = () => {
   const [gyms, setGyms] = useState([]);
   const [sessions, setSessions] = useState([]);
+  const [showGymList, setShowGymList] = useState(true); // State to manage visibility
 
   const addGym = (gym) => setGyms([...gyms, gym]);
   const addSession = (session) => setSessions([...sessions, session]);
+
+  const toggleGymList = () => setShowGymList(!showGymList);
 
   return (
     <div className="App">
@@ -25,11 +28,16 @@ const App = () => {
           <div className="card">
             <LogSession gyms={gyms} addSession={addSession} />
           </div>
+          <button className="toggle-button" onClick={toggleGymList}>
+            {showGymList ? 'Hide Gym List' : 'Show Gym List'}
+          </button>
         </div>
         <div className="content">
-          <div className="card">
-            <GymList gyms={gyms} />
-          </div>
+          {showGymList && (
+            <div className="card">
+              <GymList gyms={gyms} />
+            </div>
+          )}
           <div className="card">
             <SessionList sessions={sessions} />
           </div>
