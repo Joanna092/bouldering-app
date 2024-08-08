@@ -14,48 +14,52 @@ const LogSession = ({ gyms, addSession }) => {
     setGym('');
     setRouteName('');
     setDifficulty('');
+    setComments('');
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="date"
-        value={date}
-        onChange={(e) => setDate(e.target.value)}
-        required
-      />
-      <select
-        value={gym}
-        onChange={(e) => setGym(e.target.value)}
-        required
-      >
-        <option value="">Select Gym</option>
-        {gyms.map((gym, index) => (
-          <option key={index} value={gym.name}>{gym.name}</option>
-        ))}
-      </select>
-      <input
-        type="text"
-        value={routeName}
-        onChange={(e) => setRouteName(e.target.value)}
-        placeholder="Route Name"
-        required
-      />
-      <input
-        type="text"
-        value={difficulty}
-        onChange={(e) => setDifficulty(e.target.value)}
-        placeholder="Difficulty"
-        required
-      />
-      <textarea
-        value={comments}
-        onChange={(e) => setComments(e.target.value)}
-        placeholder="Comments"
-        rows="4"
-      />
-      <button type="submit">Log Session</button>
-    </form>
+    <div className="card">
+      <h2>Log Session</h2>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="date"
+          value={date}
+          onChange={(e) => setDate(e.target.value)}
+          required
+        />
+        <select
+          value={gym}
+          onChange={(e) => setGym(e.target.value)}
+          required
+        >
+          <option value="">Select Gym</option>
+          {gyms.map((gym, index) => (
+            <option key={index} value={gym.name}>{gym.name}</option>
+          ))}
+        </select>
+        <input
+          type="text"
+          value={routeName}
+          onChange={(e) => setRouteName(e.target.value)}
+          placeholder="Route Name"
+          required
+        />
+        <input
+          type="text"
+          value={difficulty}
+          onChange={(e) => setDifficulty(e.target.value)}
+          placeholder="Difficulty"
+          required
+        />
+        <textarea
+          value={comments}
+          onChange={(e) => setComments(e.target.value)}
+          placeholder="Comments"
+          rows="4"
+        />
+        <button type="submit">Log Session</button>
+      </form>
+    </div>
   );
 };
 
