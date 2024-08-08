@@ -5,10 +5,11 @@ const LogSession = ({ gyms, addSession }) => {
   const [gym, setGym] = useState('');
   const [routeName, setRouteName] = useState('');
   const [difficulty, setDifficulty] = useState('');
+  const [comments, setComments] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addSession({ date, gym, routeName, difficulty });
+    addSession({ date, gym, routeName, difficulty, comments });
     setDate('');
     setGym('');
     setRouteName('');
@@ -46,6 +47,12 @@ const LogSession = ({ gyms, addSession }) => {
         onChange={(e) => setDifficulty(e.target.value)}
         placeholder="Difficulty"
         required
+      />
+      <textarea
+        value={comments}
+        onChange={(e) => setComments(e.target.value)}
+        placeholder="Comments"
+        rows="4"
       />
       <button type="submit">Log Session</button>
     </form>

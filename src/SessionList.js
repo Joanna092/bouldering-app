@@ -4,7 +4,8 @@ const SessionList = ({ sessions }) => (
   <ul>
     {sessions.map((session, index) => (
       <li key={index}>
-        {session.date} - {session.gym} - {session.routeName} - {session.difficulty}
+        <p>{session.date} - {session.gym} - {session.routeName} - {session.difficulty}</p>
+        {session.comments && <p>Comments: {session.comments}</p>}
       </li>
     ))}
   </ul>
