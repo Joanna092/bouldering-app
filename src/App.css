@@ -1,3 +1,5 @@
+/* App.css */
+
 /* General Styles */
 body {
   font-family: 'Arial', sans-serif;
@@ -6,7 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-color: #f5f5f5;
+  background-color: #F4F4F4; /* Light Gray */
 }
 
 .App {
@@ -17,7 +19,7 @@ body {
 
 /* Header Styles */
 .header {
-  background-color: #1e88e5;
+  background-color: #333333; /* Charcoal */
   color: #fff;
   padding: 15px;
   position: fixed;
@@ -43,8 +45,8 @@ body {
 
 .sidebar {
   width: 300px;
-  background-color: #1e88e5;
-  color: #fff;
+  background-color: #F4F4F4; /* Light Gray */
+  color: #333; /* Dark Gray */
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   height: 100%;
@@ -56,7 +58,7 @@ body {
 }
 
 .card {
-  background: #fff;
+  background: #FFFFFF; /* White */
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 15px;
@@ -71,7 +73,7 @@ body {
 
 input, select, textarea {
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #DDDDDD; /* Light Gray */
   border-radius: 4px;
   font-size: 14px;
 }
@@ -82,7 +84,7 @@ textarea {
 
 button {
   padding: 10px;
-  background-color: #039be5;
+  background-color: #6C757D; /* Slate Gray */
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -90,7 +92,7 @@ button {
 }
 
 button:hover {
-  background-color: #0277bd;
+  background-color: #343A40; /* Dark Slate Gray */
 }
 
 /* Toggle Button Styles */
@@ -98,7 +100,7 @@ button:hover {
   width: 100%;
   padding: 10px;
   margin-top: 10px;
-  background-color: #039be5;
+  background-color: #6C757D; /* Slate Gray */
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -106,7 +108,7 @@ button:hover {
 }
 
 .toggle-button:hover {
-  background-color: #0277bd;
+  background-color: #343A40; /* Dark Slate Gray */
 }
 
 /* Main Content Styles */
@@ -123,9 +125,9 @@ ul {
 }
 
 li {
-  background-color: #fff;
+  background-color: #FFFFFF; /* White */
   padding: 15px;
-  border: 1px solid #ddd;
+  border: 1px solid #DDDDDD; /* Light Gray */
   border-radius: 8px;
   margin-bottom: 10px;
 }
